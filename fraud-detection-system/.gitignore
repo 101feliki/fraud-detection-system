@@ -507,3 +507,14 @@ training_outputs/
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+# Node.js
+node_modules/
+**/node_modules/
+
+# Dependencies
+node_modules/
+*/node_modules/*
+**/node_modules/**
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
