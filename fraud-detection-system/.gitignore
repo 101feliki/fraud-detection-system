@@ -1,0 +1,509 @@
+# .gitignore for Microinsurance Fraud Detection System
+
+# =======================================
+# 🔐 SECURITY & SENSITIVE FILES
+# =======================================
+# NEVER commit these!
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+.env.staging
+.env.production
+.env.backup
+.env.example
+
+# API Keys, Secrets, Certificates
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+*.pfx
+*.jks
+
+# Configuration files with secrets
+config/secrets.json
+config/credentials.json
+config/database.json
+config/firebase.json
+config/azure.json
+config/aws.json
+firebase.json
+
+# =======================================
+# 🐍 PYTHON (for ML Service)
+# =======================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# =======================================
+# ☕ NODE.JS / JAVASCRIPT
+# =======================================
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.lock-wscript
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env.test
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next/
+out/
+
+# Nuxt.js build / generate output
+.nuxt
+dist/
+
+# Gatsby files
+.cache/
+# Comment in the public rule in if you are using a different name for the public folder.
+# public
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
+# =======================================
+# ⚛️ REACT / FRONTEND
+# =======================================
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# =======================================
+# 🗄️ DATABASE
+# =======================================
+# PostgreSQL
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.backup
+pg_dump/
+migrations/*.backup
+
+# SQLite
+*.db-journal
+*.sqlite-journal
+
+# MongoDB
+/data/db/
+*.ns
+*.0
+mongod.lock
+
+# =======================================
+# 🐳 DOCKER / CONTAINERS
+# =======================================
+docker-compose.override.yml
+docker-compose.*.yml
+*.tar.gz
+*.dockerignore
+
+# =======================================
+# 💻 OPERATING SYSTEM
+# =======================================
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.Spotlight-V100
+.Trashes
+._*
+.fseventsd
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.trash-*
+.cache
+.cache/
+
+# =======================================
+# 🛠️ DEVELOPMENT TOOLS
+# =======================================
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-*
+*.code-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Android Studio
+.idea/
+.gradle
+local.properties
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# MyPy
+.mypy_cache/
+
+# =======================================
+# 📊 MACHINE LEARNING / AI
+# =======================================
+# Model files
+models/*.h5
+models/*.pkl
+models/*.joblib
+models/*.pb
+models/checkpoints/
+models/saved_model/
+
+# Training data
+data/raw/
+data/processed/train/
+data/processed/test/
+data/processed/val/
+
+# TensorFlow
+tf_models/
+.checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# DVC
+.dvc/
+.dvcignore
+
+# =======================================
+# 🎯 PROJECT SPECIFIC
+# =======================================
+# Uploads directory
+uploads/
+temp/
+tmp/
+
+# Logs
+logs/
+*.log
+log/
+
+# Documentation
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Performance logs
+*.perf
+*.prof
+
+# =======================================
+# 🚀 DEPLOYMENT
+# =======================================
+# Serverless
+.serverless/
+.webpack/
+
+# AWS
+amplify/
+awsconfiguration.json
+amplifyconfiguration.json
+amplify-build-config.json
+amplify-gradle-config.json
+amplifytools.xcconfig
+.secret-*
+
+# Azure
+.azure/
+
+# Firebase
+.firebase/
+.firebaserc
+
+# Heroku
+*.heroku
+
+# Netlify
+.netlify/
+
+# =======================================
+# 📁 CUSTOM (Add your project-specific ignores here)
+# =======================================
+
+# Custom data directories
+datasets/
+raw_data/
+processed_data/
+
+# Custom model outputs
+outputs/
+experiments/
+runs/
+
+# API documentation
+api-docs/
+
+# Local development scripts
+scripts/local/
+dev/
+
+# Certificate files for local development
+ssl/
+certificates/
+
+# Training outputs
+training_outputs/
+
+# =======================================
+# 📦 PACKAGE MANAGER SPECIFIC
+# =======================================
+# Yarn 2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

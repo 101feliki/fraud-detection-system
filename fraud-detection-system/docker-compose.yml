@@ -1,0 +1,32 @@
+﻿version: "3.9"
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: frauddb
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+  backend:
+    build: ./backend
+    command: ["node","src/app.js"]
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_USER=admin
+      - DB_PASS=password
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=frauddb
+    depends_on:
+      - postgres
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
