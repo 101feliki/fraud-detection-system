@@ -1,14 +1,14 @@
-Excellent 🔥 — you’re thinking like a **systems architect** now.
+Excellent — you’re thinking like a **systems architect** now.
 
 Let’s design a **complete and well-structured workflow** for your **Microinsurance Fraud Detection System (Plug-and-Play Version)** — one that can run as a **standalone service** now, but later **plug into any main microinsurance system** (e.g., policy management, claims, or payment systems).
 
 ---
 
-# ⚙️ **SYSTEM BLUEPRINT — “Microinsurance Fraud Detection Service”**
+# **SYSTEM BLUEPRINT — “Microinsurance Fraud Detection Service”**
 
 ---
 
-## 🧠 **1. Overview**
+## **1. Overview**
 
 This system runs as an **independent microservice** that detects fraud in insurance claims.
 It exposes **RESTful APIs** that any external system can consume.
@@ -17,9 +17,9 @@ When a new claim is submitted to the main insurance platform, the platform sends
 
 ---
 
-## 🧩 **2. Core Workflow**
+## **2. Core Workflow**
 
-### 🔸 **Stage 1: Claim Submission (External System)**
+### **Stage 1: Claim Submission (External System)**
 
 * A user or insurance agent submits a claim via the **main insurance system**.
 * The main system calls this service’s **`/api/fraud/analyze`** endpoint with claim details:
@@ -38,7 +38,7 @@ When a new claim is submitted to the main insurance platform, the platform sends
 
 ---
 
-### 🔸 **Stage 2: Fraud Detection Microservice**
+### **Stage 2: Fraud Detection Microservice**
 
 1. **Data Preprocessing Layer**
 
@@ -70,7 +70,7 @@ When a new claim is submitted to the main insurance platform, the platform sends
 
 ---
 
-### 🔸 **Stage 3: Main System Action**
+### **Stage 3: Main System Action**
 
 * The **main insurance system** receives the response:
 
@@ -80,7 +80,7 @@ When a new claim is submitted to the main insurance platform, the platform sends
 
 ---
 
-### 🔸 **Stage 4: Dashboard & Monitoring**
+### **Stage 4: Dashboard & Monitoring**
 
 Fraud Detection Service provides a **React-based dashboard** for analytics:
 
@@ -92,7 +92,7 @@ Fraud Detection Service provides a **React-based dashboard** for analytics:
 
 ---
 
-## 🧱 **3. Architecture Diagram (Conceptual)**
+## **3. Architecture Diagram (Conceptual)**
 
 ```
    +---------------------+
@@ -120,9 +120,9 @@ Fraud Detection Service provides a **React-based dashboard** for analytics:
 
 ---
 
-## 🗂️ **4. Subsystem Breakdown**
+## **4. Subsystem Breakdown**
 
-### 🧩 A. Backend (Node.js + Express)
+### A. Backend (Node.js + Express)
 
 Handles:
 
@@ -143,7 +143,7 @@ Handles:
 
 ---
 
-### 🧩 B. AI/ML Layer
+### B. AI/ML Layer
 
 Two approaches:
 
@@ -168,7 +168,7 @@ Two approaches:
 
 ---
 
-### 🧩 C. Database (PostgreSQL)
+### C. Database (PostgreSQL)
 
 **Tables:**
 
@@ -179,7 +179,7 @@ Two approaches:
 
 ---
 
-### 🧩 D. Dashboard (React + Tailwind + Recharts)
+### D. Dashboard (React + Tailwind + Recharts)
 
 Pages:
 
@@ -190,7 +190,7 @@ Pages:
 
 ---
 
-### 🧩 E. Integration Layer (APIs to Main System)
+### E. Integration Layer (APIs to Main System)
 
 Future plug-in options:
 
@@ -200,23 +200,23 @@ Future plug-in options:
 
 ---
 
-## 🚀 **5. Future Enhancements (Scalable Design)**
+## **5. Future Enhancements (Scalable Design)**
 
 | Area              | Enhancement                      | Description                                                           |
 | ----------------- | -------------------------------- | --------------------------------------------------------------------- |
-| **AI/ML**         | 🔹 Retraining Pipeline           | Automatic model retraining when new labeled data is approved/rejected |
-| **Data**          | 🔹 External Data Sources         | Integrate weather APIs or fraud history APIs                          |
-| **Security**      | 🔹 JWT Auth + Role Management    | Admin, Analyst, and API users                                         |
-| **Notifications** | 🔹 Email / SMS Alerts            | For high-risk claims                                                  |
-| **Blockchain**    | 🔹 Immutable Logs                | Optional smart-contract layer for claim transparency                  |
-| **Maps**          | 🔹 Geo Visualization             | Map-based display of fraud frequency                                  |
-| **Payments**      | 🔹 M-Pesa / Paystack Integration | Link fraudulent payout tracking                                       |
-| **Analytics**     | 🔹 AI Explainability (SHAP)      | Explain why a claim was flagged                                       |
-| **UI/UX**         | 🔹 AI Chat Assistant             | Chatbot that explains claim decisions                                 |
+| **AI/ML**         | Retraining Pipeline           | Automatic model retraining when new labeled data is approved/rejected |
+| **Data**          | External Data Sources         | Integrate weather APIs or fraud history APIs                          |
+| **Security**      | JWT Auth + Role Management    | Admin, Analyst, and API users                                         |
+| **Notifications** | Email / SMS Alerts            | For high-risk claims                                                  |
+| **Blockchain**    | Immutable Logs                | Optional smart-contract layer for claim transparency                  |
+| **Maps**          | Geo Visualization             | Map-based display of fraud frequency                                  |
+| **Payments**      | M-Pesa / Paystack Integration | Link fraudulent payout tracking                                       |
+| **Analytics**     | AI Explainability (SHAP)      | Explain why a claim was flagged                                       |
+| **UI/UX**         | AI Chat Assistant             | Chatbot that explains claim decisions                                 |
 
 ---
 
-## 🧭 **6. Deployment Workflow**
+## **6. Deployment Workflow**
 
 1. **Dockerize** backend + dashboard for portability
 2. Deploy on **Render / AWS ECS / Azure Container Apps**
@@ -226,7 +226,7 @@ Future plug-in options:
 
 ---
 
-## ✅ **7. Summary — Modular Plug-and-Play Design**
+## **7. Summary — Modular Plug-and-Play Design**
 
 | Module         | Role                           | Connection                          |
 | -------------- | ------------------------------ | ----------------------------------- |

@@ -1,7 +1,7 @@
 # .gitignore for Microinsurance Fraud Detection System
 
 # =======================================
-# 🔐 SECURITY & SENSITIVE FILES
+# SECURITY & SENSITIVE FILES
 # =======================================
 # NEVER commit these!
 .env
@@ -34,7 +34,7 @@ config/aws.json
 firebase.json
 
 # =======================================
-# 🐍 PYTHON (for ML Service)
+# PYTHON (for ML Service)
 # =======================================
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -149,7 +149,7 @@ dmypy.json
 cython_debug/
 
 # =======================================
-# ☕ NODE.JS / JAVASCRIPT
+# NODE.JS / JAVASCRIPT
 # =======================================
 # Dependencies
 node_modules/
@@ -233,7 +233,7 @@ dist/
 storybook-static
 
 # =======================================
-# ⚛️ REACT / FRONTEND
+# REACT / FRONTEND
 # =======================================
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -272,7 +272,7 @@ yarn-error.log*
 next-env.d.ts
 
 # =======================================
-# 🗄️ DATABASE
+# DATABASE
 # =======================================
 # PostgreSQL
 *.sqlite
@@ -294,7 +294,7 @@ migrations/*.backup
 mongod.lock
 
 # =======================================
-# 🐳 DOCKER / CONTAINERS
+# DOCKER / CONTAINERS
 # =======================================
 docker-compose.override.yml
 docker-compose.*.yml
@@ -302,7 +302,7 @@ docker-compose.*.yml
 *.dockerignore
 
 # =======================================
-# 💻 OPERATING SYSTEM
+# OPERATING SYSTEM
 # =======================================
 # macOS
 .DS_Store
@@ -336,7 +336,7 @@ $RECYCLE.BIN/
 .cache/
 
 # =======================================
-# 🛠️ DEVELOPMENT TOOLS
+# DEVELOPMENT TOOLS
 # =======================================
 # IDE
 .vscode/
@@ -377,7 +377,7 @@ local.properties
 .mypy_cache/
 
 # =======================================
-# 📊 MACHINE LEARNING / AI
+# MACHINE LEARNING / AI
 # =======================================
 # Model files
 models/*.h5
@@ -410,7 +410,7 @@ mlartifacts/
 .dvcignore
 
 # =======================================
-# 🎯 PROJECT SPECIFIC
+# PROJECT SPECIFIC
 # =======================================
 # Uploads directory
 uploads/
@@ -442,7 +442,7 @@ _site/
 *.prof
 
 # =======================================
-# 🚀 DEPLOYMENT
+# DEPLOYMENT
 # =======================================
 # Serverless
 .serverless/
@@ -471,7 +471,7 @@ amplifytools.xcconfig
 .netlify/
 
 # =======================================
-# 📁 CUSTOM (Add your project-specific ignores here)
+# CUSTOM (Add your project-specific ignores here)
 # =======================================
 
 # Custom data directories
@@ -499,7 +499,7 @@ certificates/
 training_outputs/
 
 # =======================================
-# 📦 PACKAGE MANAGER SPECIFIC
+# PACKAGE MANAGER SPECIFIC
 # =======================================
 # Yarn 2
 .yarn/cache

@@ -17,5 +17,5 @@ app.use("/api/fraud", fraudRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Fraud Detection API running on port ${PORT}`);
+  console.log(`Fraud Detection API running on port ${PORT}`);
 });

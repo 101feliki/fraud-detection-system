@@ -32,7 +32,7 @@ const Dashboard = () => {
         <tbody>
           {claims.map((c:any) => (
             <tr key={c.id} style={{textAlign:"center", borderTop:"1px solid #e5e7eb"}}>
-              <td>{c.id}</td><td>{c.claim_type}</td><td>{c.amount}</td><td>{c.fraud_score}</td><td>{c.flagged ? "⚠️ Review" : "✅ Clear"}</td>
+              <td>{c.id}</td><td>{c.claim_type}</td><td>{c.amount}</td><td>{c.fraud_score}</td><td>{c.flagged ? "Review" : "Clear"}</td>
             </tr>
           ))}
         </tbody>
