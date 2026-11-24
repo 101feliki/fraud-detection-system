@@ -1,21 +1,10 @@
-﻿import * as tf from "@tensorflow/tfjs-node";
+import axios from "axios";
 
-/*
-  This is a stub model for testing.
-  Replace this with a loaded model or a real prediction function.
-  Example: load a saved model with tf.loadLayersModel(path)
-*/
+const ML_SERVICE_URL = process.env.ML_SERVICE_URL || "http://localhost:8000";
 
+// Sends the claim to the ML scoring service and returns
+// { fraud_score, risk_level, flagged, reasons }.
 export const predictFraud = async (claim) => {
-  // TODO: replace with real feature extraction + model prediction
-  // For now return a mock score based on amount and previous claims
-  try {
-    const base = Math.tanh((claim.amount || 0) / 10000);
-    const prev = (claim.previous_claims || 0) * 0.05;
-    const score = Math.min(0.99, Math.max(0.01, base + prev * Math.random()));
-    return parseFloat(score.toFixed(2));
-  } catch (err) {
-    console.error("Model error:", err);
-    return 0.01;
-  }
+  const { data } = await axios.post(`${ML_SERVICE_URL}/predict`, claim, { timeout: 5000 });
+  return data;
 };

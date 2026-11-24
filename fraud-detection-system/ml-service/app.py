@@ -1,19 +1,30 @@
-﻿from fastapi import FastAPI
-from pydantic import BaseModel
-import random
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
 
-app = FastAPI()
+from scoring import Claim, score_claim
 
-class Claim(BaseModel):
-    client_id: str
-    amount: float
-    claim_type: str
-    location: str
-    previous_claims: int = 0
+app = FastAPI(title="Fraud Scoring Service", version="2.0.0")
+
+
+class ClaimIn(BaseModel):
+    client_id: str = Field(min_length=1)
+    amount: float = Field(gt=0)
+    claim_type: str = Field(min_length=1)
+    location: str = ""
+    previous_claims: int = Field(default=0, ge=0)
+    recent_claims_30d: int = Field(default=0, ge=0)
+    policy_age_days: int | None = Field(default=None, ge=0)
+    report_delay_days: int | None = Field(default=None, ge=0)
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 
 @app.post("/predict")
-def predict(claim: Claim):
-    # Mock predict - replace with real model load & predict
-    base = min(0.9, claim.amount / 10000)
-    score = round(max(0.01, base + claim.previous_claims * 0.03 * random.random()), 2)
-    return {"fraud_score": score, "flagged": score > 0.8}
+def predict(claim: ClaimIn):
+    try:
+        return score_claim(Claim(**claim.model_dump()))
+    except ValueError as err:
+        raise HTTPException(status_code=400, detail=str(err))
