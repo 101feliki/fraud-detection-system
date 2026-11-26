@@ -83,6 +83,8 @@ Set `DB_USER` and `DB_PASS` in your shell to override the default database crede
 ## Run manually
 
 ```bash
+cd fraud-detection-system
+
 # Database
 createdb frauddb
 psql -d frauddb -f database/schema.sql -f database/seed.sql
@@ -121,4 +123,4 @@ cd backend && npm test         # input validation
 
 ## Author
 
-**Felix Kariuki** - [@101feliki](https://github.com/101feliki)
+**Felix Kariuki**, backend & DevOps engineer · [Portfolio](https://101feliki.github.io) · [LinkedIn](https://www.linkedin.com/in/felixwachirakariuki) · [GitHub](https://github.com/101feliki)
